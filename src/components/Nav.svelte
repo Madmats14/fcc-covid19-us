@@ -5,12 +5,8 @@
 <style>
 	@media (min-width: 769px) {
 		nav {
-			border-bottom: solid gray 1px;
+			border-bottom: solid rgb(250, 56, 56) 1px;
 		}
-	}
-	.navbar-item {
-		max-width: fit-content;
-		max-height: fit-content;
 	}
 </style>
 
