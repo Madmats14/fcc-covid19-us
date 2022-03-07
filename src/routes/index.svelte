@@ -3,7 +3,8 @@
     export async function preload() {
       try {
         const usStats = await requests.usStats();
-        return { usStats };
+        const historic = await requests.historicUS();
+        return { usStats, historic};
       } catch (e) {
         this.error(500, "There was an error in calling the API, please try again in 5 minutes");
         return;
@@ -16,6 +17,8 @@
     import CovidChart from "../components/CovidChart.svelte";
     import TableContainer from "../components/TableContainer.svelte";
     export let usStats;
+    export let historic;
+    console.log(historic, 'historic');
     console.log(usStats, "usStats");
   </script>
   
