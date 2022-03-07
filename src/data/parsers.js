@@ -1,21 +1,22 @@
-import format from "./format";
-import moment from "moment";
+
+import format from './format';
+import moment from 'moment';
 
 function usStats(data) {
-    const [usStatsRaw] = data;
-    
-    return {
-        cases: format.number(usStatsRaw.positive),
-        deaths: format.number(usStatsRaw.death),
-        recovered: format.number(usStatsRaw.recovered),
-        ventilator: format.number(usStatsRaw.onVentilatorCurrently),
-        hospitalized: format.number(usStatsRaw.hospitalized),
-        icu: format.number(usStatsRaw.inIcuCurrently),
-        tested: format.number(usStatsRaw.totalTestResults),
-        updated: moment(usStatsRaw,lastModified).format('LLLL')
-    }
+  const [usStatRaw] = data;
+
+  return {
+    cases: format.number(usStatRaw.positive),
+    deaths: format.number(usStatRaw.death),
+    recovered: format.number(usStatRaw.recovered),
+    ventilator: format.number(usStatRaw.onVentilatorCurrently),
+    hospitalized: format.number(usStatRaw.hospitalized),
+    icu: format.number(usStatRaw.inIcuCurrently),
+    tested: format.number(usStatRaw.totalTestResults),
+    updated: moment(usStatRaw.lastModified).format('LLLL'),
+  };
 }
 
 export default {
-    usStats,
-}
+  usStats,
+};
