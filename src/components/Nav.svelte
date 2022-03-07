@@ -7,12 +7,12 @@
 </script>
 
 <style>
-	@media(min-width: 300px) {
-		nav {
-			border-bottom: solid gray 5px;
-		}
+	@media (min-width: 769px) {
+	  nav {
+		border-bottom: solid gray 1px;
+	  }
 	}
-</style>
+  </style>
 
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
